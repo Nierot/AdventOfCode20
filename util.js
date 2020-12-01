@@ -8,3 +8,7 @@ export function readLines(path) {
 export function readIntFile(path) {
   return readLines(path).map(elem => Number.parseInt(elem));
 }
+
+export function print(...toPrint) {
+  console.log(...toPrint);
+}
