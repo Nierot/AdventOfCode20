@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "AoC 2020",
   "main": "index.js",
+  "nodemonConfig": {
+    "ext": "*.js, *.json, *.rock"
+  },
   "scripts": {
     "start": "nodemon"
   },
@@ -17,7 +20,8 @@
   },
   "homepage": "https://github.com/Nierot/AdventOfCode20#readme",
   "dependencies": {
-    "esm": "^3.2.25"
+    "esm": "^3.2.25",
+    "readline-sync": "^1.4.10"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"

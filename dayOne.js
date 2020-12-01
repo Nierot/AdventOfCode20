@@ -1,4 +1,6 @@
-import { readIntFile, print } from './util.js';
+import { readIntFile, readFile, print, arrayToRockstar } from './util.js';
+const satriani = require('./rockstar/satriani/satriani.js');
+const readlineSync = require('readline-sync');
 
 const puzzleInput = readIntFile('./input/dayOne');
 
@@ -37,4 +39,16 @@ function partTwo() {
   console.log(firstEntry * secondEntry * thirdEntry);
 }
 
-partTwo();
+function partOneRockstar() {
+  // Read file and add the puzzle input
+  let program = readFile('./dayOne.rock');
+  const rockstarArray = arrayToRockstar(puzzleInput);
+  program = rockstarArray + program;
+  
+  // Run the program
+  const rockstar = new satriani.Interpreter();
+  let result = rockstar.run(rockstar.parse(program), readlineSync.question, console.log);
+  console.log(result);
+}
+
+partOneRockstar();
