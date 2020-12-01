@@ -1,0 +1,45 @@
+Let Tommy be 199
+Let Gina be Tommy
+Let Guns be mysterious
+Roses is -1
+
+Bon Jovi takes your heart and the whole (Multiply both numbers)
+Put the whole of your heart into my hands
+Give back my hands
+
+
+Skid Row takes Kickstart and My heart (Sum of two numbers and check if equals 2020)
+Let my dreams be Kickstart with My heart
+Give back Mister Crowley taking My Dreams
+
+
+Mister Crowley takes the devil (Check if 2020)
+Give back the devil is 2020
+
+
+Livin takes your heart (Main function)
+Until Tommy is Roses (Iterator)
+Let my heart be the Union at Tommy (Take element from array)
+Put Docter Feelgood taking my heart into Live Wire (Check if this variable is equal to 2020)
+If Live Wire ain't 4 (If not 4, for some reason it always is 4)
+Give back Bon Jovi taking Live Wire, and my heart
+
+Knock Tommy down (Tommy--)
+
+Give back Guns
+
+
+Docter Feelgood takes your heart (Second iterator)
+the top were Guns (Instanciate Home with mysterious)
+Until Gina is Roses (Iterate over the puzzle input)
+Let Devil be the Union at Gina
+If Skid Row taking your heart, and Devil (If sum of your heart and iterator equals 2020)
+put Devil into the top (Number Found!)
+
+Knock Gina down (Gina--)
+
+Let Gina be 199
+Give back the top (Returns mysterious if sum is not 2020, returns number if sum is 2020)
+
+
+Give back Livin taking Guns
