@@ -6,7 +6,7 @@ export function readFile(path) {
 
 export function readLines(path) {
   const file = readFileSync(path, 'utf-8');
-  return file.split('\r\n');
+  return file.split('\n');
 }
 
 export function readIntFile(path) {
@@ -28,4 +28,8 @@ export function arrayToRockstar(array) {
     .map(elem => `Let the Union at ${iterator++} be ${elem}\n`)
     .forEach(elem => res += elem);
   return res;
+}
+
+export function between(min, max, actual) {
+  return min <= actual && actual <= max;
 }
