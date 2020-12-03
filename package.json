@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Nierot/AdventOfCode20#readme",
   "dependencies": {
+    "colors": "^1.4.0",
     "esm": "^3.2.25",
     "readline-sync": "^1.4.10"
   },
