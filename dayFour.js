@@ -1,16 +1,7 @@
 import { readLines } from './util';
 
-const REQ_FIELDS = [
-  'pid',
-  'ecl',
-  'hcl',
-  'eyr',
-  'byr',
-  'hgt',
-  'iyr'
-]
+const EYE = [ 'amb', 'blu', 'brn', 'gry', 'grn', 'hzl', 'oth' ];
 
-let previousObj = {};
 let temp = [];
 let cur = 0;
 readLines('./input/dayFour')
@@ -18,21 +9,6 @@ readLines('./input/dayFour')
     if (!temp[cur]) temp[cur] = [];
     if (line !== '') temp[cur].push(line);
     else cur++;
-    // if (line !== '') {
-    //   let obj = {};
-    //   let i = 0;
-    //   let prev;
-    //   line.split(/ |:/g).forEach(val => {
-    //     if (i % 2 !== 0) obj[prev] = val;
-    //     prev = val;
-    //     i++;
-    //   });
-    //   Object.assign(previousObj, obj);
-    // } else {
-    //   let foo = previousObj;
-    //   previousObj = {};
-    //   return foo;
-    // }
   })
 
 const puzzleInput = temp
@@ -47,27 +23,49 @@ const puzzleInput = temp
     return pass;
   }) 
 
-
-const partOne = () => {
-  let falsePassports = 0;
-  let oof = [];
-  console.log(puzzleInput[1]);
-  puzzleInput.forEach(passport => {
+const filterPassports = () => {
+  return puzzleInput.filter(passport => {
     let l = Object.keys(passport).length;
     if (l === 8) {
-      // good
+      return passport;
     } else if (l === 7) {
-      if (Object.keys(passport).includes('cid')) {
-        falsePassports++;
+      if (!Object.keys(passport).includes('cid')) {
+        return passport;
       }
-    } else {
-      falsePassports++
     }
   })
+}
+
+const partOne = () => {
+  let goodPassports = filterPassports().length;
   console.log('\n')
   console.log('Part One');
-  console.log({ falsePassports });
+  console.log({ goodPassports });
   console.log('\n');
 }
 
-// partOne();
+const partTwo = () => {
+  let goodPassports = filterPassports()
+    .filter(({ byr }) => (!isNaN(Number.parseInt(byr)) && byr >= 1920 && byr <= 2002 && byr.length === 4))
+    .filter(({ iyr }) => (!isNaN(Number.parseInt(iyr)) && iyr >= 2010 && iyr <= 2020 && iyr.length === 4))
+    .filter(({ eyr }) => (!isNaN(Number.parseInt(eyr)) && eyr >= 2020 && eyr <= 2030 && eyr.length === 4))
+    .filter(({ hcl }) => (hcl.indexOf('#') === 0 && hcl.length === 7 && hcl.split('').filter(char => /([a-f]|[0-9]|[#])/.exec(char).length === 0).length === 0))
+    .filter(({ ecl }) => EYE.includes(ecl))
+    .filter(({ pid }) => (!isNaN(Number.parseInt(pid) && pid.length === 9))) 
+    .filter(({ hgt }) => {
+      if (hgt.includes('cm')) {
+        let h = hgt.split('cm')[0];
+        return (h >= 150 && h <= 193)
+      } else if (hgt.includes('in')) {
+        let h = hgt.split('in')[0];
+        return (h >= 59 && h <= 76);
+      }
+    }).length
+    console.log('\n')
+    console.log('Part two');
+    console.log({ goodPassports });
+    console.log('\n');
+  }
+
+partOne();
+partTwo();
