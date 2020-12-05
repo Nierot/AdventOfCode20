@@ -1,6 +1,6 @@
 import { print, readLines, between } from './util';
 
-const puzzleInput = readLines('./input/dayTwo')
+const puzzleInput = readLines('../input/dayTwo')
   .map(e => e.split(':'))
   .map(e => [ e[0], e[1].split(' ')[1] ])
   .map(e => [ e[0].split('-'), e[1] ])

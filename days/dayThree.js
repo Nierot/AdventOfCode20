@@ -1,7 +1,7 @@
 import { readLines } from './util';
 const colors = require('colors');
 
-const puzzleInput = readLines('./input/dayThree');
+const puzzleInput = readLines('../input/dayThree');
 
 const partOne = () => {
   let t0 = new Date().getTime();
