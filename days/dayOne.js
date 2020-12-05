@@ -2,7 +2,7 @@ import { readIntFile, readFile, print, arrayToRockstar } from './util.js';
 const satriani = require('../rockstar/satriani/satriani.js');
 const readlineSync = require('readline-sync');
 
-const puzzleInput = readIntFile('../input/dayOne');
+const puzzleInput = readIntFile('./input/dayOne');
 
 function partOne() {
   let firstEntry, secondEntry = 0;

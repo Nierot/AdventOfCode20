@@ -4,7 +4,7 @@ const EYE = [ 'amb', 'blu', 'brn', 'gry', 'grn', 'hzl', 'oth' ];
 
 let temp = [];
 let cur = 0;
-readLines('../input/dayFour')
+readLines('./input/dayFour')
   .forEach(line => {
     if (!temp[cur]) temp[cur] = [];
     if (line !== '') temp[cur].push(line);
