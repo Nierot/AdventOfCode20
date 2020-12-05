@@ -51,7 +51,7 @@ const partTwo = () => {
     .filter(({ eyr }) => (!isNaN(Number.parseInt(eyr)) && eyr >= 2020 && eyr <= 2030 && eyr.length === 4))
     .filter(({ hcl }) => (hcl.indexOf('#') === 0 && hcl.length === 7 && hcl.split('').filter(char => /([a-f]|[0-9]|[#])/.exec(char).length === 0).length === 0))
     .filter(({ ecl }) => EYE.includes(ecl))
-    .filter(({ pid }) => (!isNaN(Number.parseInt(pid) && pid.length === 9))) 
+    .filter(({ pid }) => (!isNaN(Number.parseInt(pid)) && pid.length === 9))
     .filter(({ hgt }) => {
       if (hgt.includes('cm')) {
         let h = hgt.split('cm')[0];
