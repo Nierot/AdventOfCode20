@@ -33,3 +33,12 @@ export function arrayToRockstar(array) {
 export function between(min, max, actual) {
   return min <= actual && actual <= max;
 }
+
+/**
+ * Calculates intersection between two sets 
+ * @param {Set} first 
+ * @param {Set} second 
+ */
+export function intersection(first, second) {
+  return new Set([...first].filter(e => second.has(e)));
+}
