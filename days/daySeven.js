@@ -8,12 +8,12 @@ const splitBags = () => {
     .filter(word => word !== '')
     .map(word => word[0] === ' ' ? word.slice(1) : word)
     .map(word => word[word.length - 1] === ' ' ? word.slice(0, word.length - 1) : word)
-    // .map(word => word[word.length - 1] === ' ' ? word.split(' ').filter(word => word !== '') : word)
-    // .map(word => word[0] === ' ' ? word.split(' ').slice(1) : word)
   console.log(oof)
 }
 
 const partOne = () => {
+  
+
 
   console.log('\n');
   console.log('   Part One:');
