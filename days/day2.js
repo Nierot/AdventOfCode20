@@ -1,4 +1,4 @@
-import { print, readLines, between } from './util';
+import { print, readLines, between } from '../util';
 
 const puzzleInput = readLines('./input/dayTwo')
   .map(e => e.split(':'))

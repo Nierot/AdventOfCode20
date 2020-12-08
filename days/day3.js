@@ -1,4 +1,4 @@
-import { readLines } from './util';
+import { readLines } from '../util';
 const colors = require('colors');
 
 const puzzleInput = readLines('./input/dayThree');

@@ -1,4 +1,4 @@
-import { readIntFile, readFile, print, arrayToRockstar } from './util.js';
+import { readIntFile, readFile, print, arrayToRockstar } from '../util.js';
 const satriani = require('../rockstar/satriani/satriani.js');
 const readlineSync = require('readline-sync');
 
@@ -51,4 +51,6 @@ function partOneRockstar() {
   console.log(result);
 }
 
-partOneRockstar();
+partOne();
+partTwo();
+// partOneRockstar();
