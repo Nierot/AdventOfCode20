@@ -2,7 +2,7 @@ require = require('esm')(module);
 
 // Load this days module
 // Comment this out if you run everything
-module.exports = require('./days/day10.js');
+module.exports = require('./days/day12.js');
 
 const runEverything = () => {
   const fs = require('fs');
