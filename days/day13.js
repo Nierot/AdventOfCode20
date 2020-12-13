@@ -24,11 +24,13 @@ const partOne = () => {
 const partTwo = () => {
   let t1 = new Date().getTime();
   let timestamp = 0;
-  let iShouldWriteBetterCode = 100000000000000;
+  let iShouldWriteBetterCode = 1000000000000000;
+  let max = 1463175673841141;
   const [ first, ...constraint ] = puzzleInput[1]
     .split(/,/g)
     .map(id => isNaN(parseInt(id)) ? id : parseInt(id));
   for (let i = iShouldWriteBetterCode; true; i++) {
+    if (timestamp > max) break;
     timestamp = i;
     if (constraint.filter((next, index) => {
       if (next === 'x') return false;
