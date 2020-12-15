@@ -1,0 +1,80 @@
+💭 🤮 is the class that solves the puzzle
+🐇🤮🍇
+  💭 instance variables
+  🖍🆕 max_turn 🔢
+  🖍🆕 number_spoken 🔢 ⬅ 0
+  
+  💭 constuctor
+  🆕 🍼 max_turn 🔢 🍇🍉
+
+  💭 setter for max_turn
+  ❗ 📍 new_max 🔢 🍇
+    new_max ➡ 🖍max_turn
+  🍉
+
+  💭 getter for max_turn
+  ❓ 🚀 ➡️ 🔢 🍇
+    ↩️ max_turn 
+  🍉
+
+  💭 actual solver
+  ❗ 🥤 ➡ 🔢🍇
+    🍿 18 8 0 5 4 1 20 🍆 ➡ puzzle_input
+    🐴 puzzle_input❓ ➡ length
+    💭 initialize hashmap
+    🍿
+      🔤0🔤 ➡ 3
+    🍆 ➡ 🖍🆕 numbers
+    0 ➡ 🖍🆕 last_spoken
+    1 ➡ 🖍🆕 turn
+
+    💭 set initial values
+    🔂 val puzzle_input 🍇
+      turn ➡ 🐽numbers 🔤🧲val🧲🔤❗
+      last_spoken ⬅✖ 0
+      last_spoken ⬅➕ val
+      💭😀🔤val 🧲val🧲 key 🧲turn🧲🔤❗
+      turn ⬅️➕ 1
+    🍉
+    🆕⏩ length max_turn❗ ➡ range
+
+    💭 play the game
+    🔂 i range 🍇
+      💭 if the number has been spoken before
+      ↪️ 🐽numbers 🔤🧲last_spoken🧲🔤❗️ ➡️ last 🍇
+        i ➡ 🐽numbers 🔤🧲last_spoken🧲🔤❗
+        last_spoken ⬅✖ 0
+        i ➡ 🖍🆕 temp
+        temp ⬅➖ last
+        last_spoken ⬅➕ temp
+      🍉
+      🙅 🍇
+        i ➡ 🐽numbers 🔤🧲last_spoken🧲🔤❗
+        last_spoken ⬅✖ 0
+      🍉
+      💭😀🔤i 🧲i🧲🔤❗
+      💭😀🔤last_spoken 🧲last_spoken🧲🔤❗
+    🍉
+
+    ↩️ last_spoken
+  🍉
+🍉
+
+💭↪️ 🐽numbers 🔤🧲turn🧲🔤❗️ ➡️ greeting 🍇
+💭  😀 🔤🧲greeting🧲🔤❗️
+💭🍉
+
+
+💭 Main method
+🏁🍇
+  😀 🔤Running part one🔤 ❗
+  🆕🤮 2020❗ ➡️ solver
+  🥤 solver❗ ➡ answer_one
+  😀 🔤Part one answer: 🧲answer_one🧲🔤 ❗
+
+  📍 solver 30000000❗ 
+  🚀 solver❓ ➡ new_max_turn
+  😀 🔤❌nRunning part two with max_turn = 🧲new_max_turn🧲🔤 ❗
+  🥤 solver❗ ➡ answer_two
+  😀 🔤Part two answer: 🧲answer_two🧲🔤 ❗
+🍉
