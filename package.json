@@ -22,6 +22,7 @@
   "dependencies": {
     "colors": "^1.4.0",
     "esm": "^3.2.25",
+    "lodash": "^4.17.20",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
